@@ -1,28 +1,36 @@
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="PRixtCNmutyVdZRu9Dkio3ELGrlArBVrv0BF_HcIc8s" />
-    <meta name="description" content="Jaivik Tiya Tech: Verified Crypto Airdrops & Coding Tips.">
-    <title>Jaivik Tiya Tech | Earning & Coding</title>
+    <meta name="description" content="Jaivik Tiya Tech: Best Crypto Airdrops & Coding Tips. Verified Airdrops for students.">
+    <title>Jaivik Tiya Tech | Earning Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary: #00d2ff; --secondary: #3a7bd5; --dark: #121212; }
-        body { font-family: 'Poppins', sans-serif; margin: 0; background: var(--dark); color: white; line-height: 1.6; }
-        header { background: linear-gradient(135deg, var(--primary), var(--secondary)); padding: 40px 20px; text-align: center; clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+        :root { --primary: #00d2ff; --secondary: #3a7bd5; --dark: #121212; --success: #25d366; }
+        body { font-family: 'Poppins', sans-serif; margin: 0; background: var(--dark); color: white; line-height: 1.6; padding-bottom: 60px; }
+        header { background: linear-gradient(135deg, var(--primary), var(--secondary)); padding: 50px 20px; text-align: center; clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
         nav { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); position: sticky; top: 0; padding: 15px; text-align: center; z-index: 1000; }
         nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: 600; }
-        .container { padding: 30px 20px; max-width: 900px; margin: auto; }
-        .card { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 25px; margin-bottom: 25px; border-radius: 15px; backdrop-filter: blur(5px); transition: 0.3s; }
-        .card:hover { transform: translateY(-10px); border-color: var(--primary); }
-        .btn { background: linear-gradient(to right, #00d2ff, #3a7bd5); color: white; padding: 12px 25px; text-decoration: none; border-radius: 30px; display: inline-block; font-weight: bold; margin-top: 15px; box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3); }
-        .badge { background: #ff4b2b; padding: 3px 10px; border-radius: 5px; font-size: 12px; font-weight: bold; vertical-align: middle; margin-left: 10px; }
+        .container { padding: 20px; max-width: 900px; margin: auto; }
+        
+        /* Dashboard Table Style */
+        .table-container { background: rgba(255, 255, 255, 0.05); border-radius: 15px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); margin-top: 20px; }
+        table { width: 100%; border-collapse: collapse; text-align: left; }
+        th, td { padding: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        th { background: rgba(255,255,255,0.1); color: var(--primary); }
+        .status-live { color: var(--success); font-weight: bold; font-size: 0.8rem; }
+        
+        .card { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 25px; margin-bottom: 25px; border-radius: 15px; backdrop-filter: blur(5px); }
+        .btn { background: linear-gradient(to right, #00d2ff, #3a7bd5); color: white; padding: 10px 20px; text-decoration: none; border-radius: 25px; display: inline-block; font-weight: bold; font-size: 0.9rem; }
+        
         .floating-btn { position: fixed; right: 20px; z-index: 1000; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; color: white; text-decoration: none; box-shadow: 0 4px 15px rgba(0,0,0,0.5); transition: 0.3s; }
         .whatsapp { bottom: 95px; background-color: #25d366; }
         .telegram { bottom: 25px; background-color: #0088cc; }
-        footer { text-align: center; padding: 40px; font-size: 0.9rem; opacity: 0.7; border-top: 1px solid rgba(255,255,255,0.1); }
-        code { background: #222; padding: 5px 10px; border-radius: 5px; color: #00d2ff; }
+        
+        .footer-join { background: linear-gradient(rgba(0,0,0,0), rgba(0,210,255,0.1)); padding: 40px 20px; text-align: center; border-radius: 20px; margin-top: 40px; border: 1px dashed var(--primary); }
+        footer { text-align: center; padding: 40px; font-size: 0.8rem; opacity: 0.6; }
     </style>
 </head>
 <body>
@@ -30,41 +38,64 @@
 <a href="https://wa.me/919795414141" class="floating-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
 <a href="https://t.me/jaiviktiyatech" class="floating-btn telegram" target="_blank"><i class="fab fa-telegram-plane"></i></a>
 
-<nav><a href="#">Home</a><a href="#earning">Airdrops</a><a href="#coding">Coding</a></nav>
+<nav><a href="#">Home</a><a href="#airdrop-table">Airdrop Table</a><a href="#coding">Coding</a></nav>
 
 <header>
-    <h1 style="margin:0; font-size: 2.5rem;">Jaivik Tiya Tech</h1>
-    <p>Empowering Your Future with Code & Crypto</p>
+    <h1 style="margin:0;">Jaivik Tiya Tech</h1>
+    <p>Jaipur's Most Trusted Crypto & Tech Hub</p>
 </header>
 
 <div class="container">
-    <div id="earning">
-        <h2 style="text-align:center; color:var(--primary); margin-bottom: 30px;">💰 Verified Airdrops List</h2>
-
-        <div class="card">
-            <h3 style="margin-top:0;">💎 Czrex Exchange <span class="badge">LATEST</span></h3>
-            <p>Exchange ka confirmed token airdrop. MetaMask connect karke jaldi join karein!</p>
-            <a href="https://quest.czrex.com/loyalty?referral_code=FHWVTN3K" class="btn" target="_blank">Join Czrex Airdrop</a>
-        </div>
-
-        <div class="card">
-            <h3 style="margin-top:0;">🐄 MooArmy Bot</h3>
-            <p>Verified Telegram bot. Rozana simple tasks karke tokens earn karein.</p>
-            <a href="https://t.me/mooarmybot?start=c_pe3O_GPigqranWlfQWgMuw" class="btn" target="_blank">Join MooArmy</a>
-        </div>
+    <div class="card">
+        <h3>🚀 BCA Student's Tech Vision</h3>
+        <p>Bhaiyo, yahan sirf verified airdrops milenge. Hum gambling se door rehte hain aur mehnat se earning par focus karte hain. <b>Jaivik aur Tiya</b> ke liye ek badhiya future banana hai!</p>
     </div>
 
-    <div id="coding" class="card" style="margin-top:50px;">
-        <h2>🐍 Python Corner</h2>
-        <p>Jaivik & Tiya ke liye technology ka sahi rasta. Bina gambling ke mehnat ki seekh.</p>
-        <code>print("Jaivik & Tiya, Future Tech Stars!")</code>
+    <h2 id="airdrop-table" style="color:var(--primary);"><i class="fas fa-list"></i> Live Airdrop Dashboard</h2>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Reward</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>Czrex Exchange</b></td>
+                    <td>CZR Token</td>
+                    <td class="status-live">● LIVE</td>
+                    <td><a href="https://quest.czrex.com/loyalty?referral_code=FHWVTN3K" style="color:var(--primary);">Join Now</a></td>
+                </tr>
+                <tr>
+                    <td><b>MooArmy Bot</b></td>
+                    <td>MOO Token</td>
+                    <td class="status-live">● LIVE</td>
+                    <td><a href="https://t.me/mooarmybot?start=c_pe3O_GPigqranWlfQWgMuw" style="color:var(--primary);">Join Now</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="coding" class="card" style="margin-top:40px;">
+        <h3>🐍 Python Corner</h3>
+        <code>print("Future is Bright with Coding Power!")</code>
+    </div>
+
+    <div class="footer-join">
+        <h3>📢 Kuch Miss Na Ho Jaye!</h3>
+        <p>Har naye airdrop ki update sabse pehle hamare Telegram channel par aati hai.</p>
+        <a href="https://t.me/jaiviktiyatech" class="btn" style="background: #0088cc;"><i class="fab fa-telegram-plane"></i> Join Telegram Channel</a>
     </div>
 </div>
 
 <footer>
-    <p>Made with ❤️ for <b>Jaivik & Tiya Jhirwal</b></p>
+    <p>Dedicated to <b>Jaivik & Tiya Jhirwal</b></p>
     <p>&copy; 2026 Jaivik Tiya Tech | Built by Yogesh Jhirwal from Jaipur</p>
 </footer>
 
 </body>
-</html>
+        </html>
+
