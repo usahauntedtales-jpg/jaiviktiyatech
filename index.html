@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jaivik Tiya Tech | Dashboard</title>
+    <meta name="google-site-verification" content="PRixtCNmutyVdZRu9Dkio3ELGrlArBVrv0BF_HcIc8s" />
+    <meta name="description" content="Jaivik Tiya Tech: Jaipur's Guide to Verified Crypto Airdrops & Tech Tools.">
+    <title>Jaivik Tiya Tech | Dashboard & Tools</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --primary: #00d2ff; --secondary: #3a7bd5; --dark: #0a0a0a; --success: #25d366; }
@@ -14,13 +16,27 @@
         nav { background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(10px); position: sticky; top: 0; padding: 15px; text-align: center; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); }
         nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
         .container { padding: 20px; max-width: 900px; margin: auto; }
-        .section-title { text-align: center; color: var(--primary); margin-top: 30px; }
-        .table-container { background: #151515; border-radius: 15px; overflow-x: auto; border: 1px solid #333; margin-top: 20px; }
+        .section-title { text-align: center; color: var(--primary); margin-top: 40px; margin-bottom: 20px; }
+        
+        .table-container { background: #151515; border-radius: 15px; overflow-x: auto; border: 1px solid #333; margin-bottom: 30px; }
         table { width: 100%; border-collapse: collapse; min-width: 500px; }
         th, td { padding: 15px; border-bottom: 1px solid #222; text-align: left; }
         th { background: #222; color: var(--primary); font-size: 0.8rem; text-transform: uppercase; }
+        
         .card { background: #151515; border: 1px solid #333; padding: 25px; margin-bottom: 25px; border-radius: 15px; }
-        .btn { background: linear-gradient(to right, #00d2ff, #3a7bd5); color: white; padding: 10px 20px; text-decoration: none; border-radius: 25px; font-weight: bold; display: inline-block; font-size: 0.8rem; }
+        
+        /* Calculator Styles */
+        .calc-box { background: linear-gradient(145deg, #111, #1a1a1a); border: 1px solid var(--primary); text-align: center; }
+        .input-group { margin: 15px 0; text-align: left; }
+        .input-group label { display: block; margin-bottom: 5px; color: #aaa; font-size: 0.9rem; }
+        .input-group input { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #444; background: #222; color: white; box-sizing: border-box; font-size: 1rem; }
+        .input-group input:focus { border-color: var(--primary); outline: none; }
+        #calcResult { margin-top: 20px; padding: 15px; background: rgba(0, 210, 255, 0.1); border-radius: 8px; display: none; font-size: 1.2rem; color: var(--success); font-weight: bold; border: 1px dashed var(--primary); }
+
+        .btn { background: linear-gradient(to right, #00d2ff, #3a7bd5); color: white; padding: 12px 20px; text-decoration: none; border-radius: 25px; font-weight: bold; display: inline-block; font-size: 0.9rem; cursor: pointer; border: none; width: 100%; transition: 0.3s; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0, 210, 255, 0.3); }
+        .btn-small { width: auto; padding: 8px 15px; font-size: 0.8rem; }
+        
         .floating-btn { position: fixed; right: 20px; z-index: 1000; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; color: white; text-decoration: none; }
         .whatsapp { bottom: 95px; background-color: #25d366; }
         .telegram { bottom: 25px; background-color: #0088cc; }
@@ -32,20 +48,20 @@
 <a href="https://wa.me/919795414141" class="floating-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
 <a href="https://t.me/jaiviktiyatech" class="floating-btn telegram" target="_blank"><i class="fab fa-telegram-plane"></i></a>
 
-<nav><a href="#">Home</a><a href="#airdrop-table">Airdrops</a></nav>
+<nav><a href="#">Home</a><a href="#airdrop-table">Airdrops</a><a href="#calculator">Tool</a></nav>
 
 <header>
     <div class="logo-container">
-        <img src="logo.png" alt="Jaivik Tiya Tech Logo" class="header-logo">
+        <img src="logo.png" alt="Jaivik Tiya Tech Logo" class="header-logo" onerror="this.style.display='none'">
     </div>
     <h1 style="margin:10px 0 5px; font-size: 1.8rem;">Jaivik Tiya Tech</h1>
-    <p style="opacity:0.8; font-size:0.9rem; margin:0;">Verified Crypto Airdrops & Tech Hub</p>
+    <p style="opacity:0.8; font-size:0.9rem; margin:0;">Verified Crypto Airdrops & Tech Tools</p>
 </header>
 
 <div class="container">
     <div class="card">
         <h3>🚀 Welcome Bhai!</h3>
-        <p>BCA student ke nate, maine ye platform <b>Jaivik aur Tiya Jhirwal</b> ke liye banaya hai. Yahan sirf verified kamayi hogi.</p>
+        <p>Yahan hum tech aur mehnat se earning karna seekhte hain. Gambling aur shortcut wale raasto se door, <b>Jaivik aur Tiya</b> ko hum hamesha sahi raaste ki seekh denge.</p>
     </div>
 
     <h2 id="airdrop-table" class="section-title">💰 Live Airdrop Dashboard</h2>
@@ -64,16 +80,35 @@
                     <td><b>Czrex Exchange</b></td>
                     <td>CZR Token</td>
                     <td style="color:var(--success)">● LIVE</td>
-                    <td><a href="https://quest.czrex.com/loyalty?referral_code=FHWVTN3K" class="btn" target="_blank">Join</a></td>
+                    <td><a href="https://quest.czrex.com/loyalty?referral_code=FHWVTN3K" class="btn btn-small" target="_blank">Join</a></td>
                 </tr>
                 <tr>
                     <td><b>MooArmy Bot</b></td>
                     <td>MOO Token</td>
                     <td style="color:var(--success)">● LIVE</td>
-                    <td><a href="https://t.me/mooarmybot?start=c_pe3O_GPigqranWlfQWgMuw" class="btn" target="_blank">Join</a></td>
+                    <td><a href="https://t.me/mooarmybot?start=c_pe3O_GPigqranWlfQWgMuw" class="btn btn-small" target="_blank">Join</a></td>
                 </tr>
             </tbody>
         </table>
+    </div>
+
+    <h2 id="calculator" class="section-title"><i class="fas fa-calculator"></i> Airdrop Profit Calculator</h2>
+    <div class="card calc-box">
+        <p style="opacity: 0.8; font-size: 0.9rem;">Apne tokens ki estimated value yahan check karein!</p>
+        
+        <div class="input-group">
+            <label>Total Tokens Earned (Kitne coin kamaye?)</label>
+            <input type="number" id="tokens" placeholder="e.g. 5000">
+        </div>
+        
+        <div class="input-group">
+            <label>Expected Price per Token in $ (Listing Price)</label>
+            <input type="number" id="price" placeholder="e.g. 0.05" step="0.001">
+        </div>
+        
+        <button class="btn" onclick="calculateProfit()">Calculate My Profit 🚀</button>
+
+        <div id="calcResult"></div>
     </div>
 </div>
 
@@ -81,6 +116,26 @@
     <p>© 2026 Jaivik Tiya Tech | Built by Yogesh Jhirwal, Jaipur</p>
 </footer>
 
+<script>
+    function calculateProfit() {
+        let tokens = document.getElementById('tokens').value;
+        let price = document.getElementById('price').value;
+        let resultDiv = document.getElementById('calcResult');
+
+        if(tokens === "" || price === "") {
+            alert("Bhai, pehle tokens aur price toh daal do!");
+            return;
+        }
+
+        // Calculation: Tokens * Price
+        let profitUSD = tokens * price;
+        // USD to INR conversion (Approx 88 Rupees)
+        let profitINR = profitUSD * 88;
+
+        resultDiv.style.display = "block";
+        resultDiv.innerHTML = `Estimated Profit: <br> 💵 $${profitUSD.toFixed(2)} USD <br> 🇮🇳 ₹${profitINR.toFixed(0)} INR`;
+    }
+</script>
+
 </body>
-                            </html>
-    
+</html>
