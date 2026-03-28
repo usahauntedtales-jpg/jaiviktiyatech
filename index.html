@@ -3,55 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jaivik Tiya Tech - Earning & Coding</title>
+    <title>Jaivik Tiya Tech | Earning & Coding</title>
     <style>
-        /* Basic Styling */
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
-        header { background: #333; color: #fff; padding: 20px; text-align: center; }
-        nav { background: #444; padding: 10px; text-align: center; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        .container { padding: 20px; max-width: 1000px; margin: auto; }
-        .card { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        h2 { color: #333; }
-        .btn { background: #28a745; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; }
-        footer { text-align: center; padding: 20px; background: #333; color: white; margin-top: 20px; }
+        :root { --primary: #00d2ff; --secondary: #3a7bd5; --dark: #121212; }
+        body { font-family: 'Poppins', sans-serif; margin: 0; background: var(--dark); color: white; line-height: 1.6; }
+        header { background: linear-gradient(135deg, var(--primary), var(--secondary)); padding: 40px 20px; text-align: center; clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+        nav { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); position: sticky; top: 0; padding: 15px; text-align: center; z-index: 1000; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: 600; transition: 0.3s; }
+        .container { padding: 30px 20px; max-width: 900px; margin: auto; }
+        .card { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 25px; margin-bottom: 25px; border-radius: 15px; backdrop-filter: blur(5px); transition: transform 0.3s; }
+        .card:hover { transform: translateY(-10px); border-color: var(--primary); }
+        .btn { background: linear-gradient(to right, #00d2ff, #3a7bd5); color: white; padding: 12px 25px; text-decoration: none; border-radius: 30px; display: inline-block; font-weight: bold; margin-top: 15px; box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3); }
+        footer { text-align: center; padding: 40px; font-size: 0.9rem; opacity: 0.7; }
+        code { background: #222; padding: 5px 10px; border-radius: 5px; color: #00d2ff; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Jaivik Tiya Tech</h1>
-    <p>Sahi Rasta, Sahi Earning - Coding aur Tech ki Duniya</p>
-</header>
-
 <nav>
     <a href="#">Home</a>
-    <a href="#earning">Earning Tips</a>
-    <a href="#coding">Python Corner</a>
+    <a href="#earning">Earning</a>
+    <a href="#coding">Coding</a>
 </nav>
 
+<header>
+    <h1 style="margin:0; font-size: 2.5rem;">Jaivik Tiya Tech</h1>
+    <p>Empowering Your Future with Code & Crypto</p>
+</header>
+
 <div class="container">
-    <section id="home" class="card">
-        <h2>Welcome Bhai!</h2>
-        <p>Yahan hum seekhenge ki kaise technology aur coding ka sahi use karke online paise kamaye ja sakte hain bina kisi galat shortcut ke.</p>
-    </section>
+    <div class="card">
+        <h2>🚀 Welcome Bhai!</h2>
+        <p>BCA student hone ke nate, maine ye platform banaya hai taki aap sahi tech aur genuine earning ke tareeke seekh saken. Yahan koi shortcut nahi, sirf solid learning hai.</p>
+    </div>
 
-    <section id="earning" class="card">
-        <h2>Top Earning Methods (2026)</h2>
-        <p>100% Genuine Airdrops aur Web3 projects ki jankari yahan milegi.</p>
-        <a href="#" class="btn">Check Latest Airdrops</a>
-    </section>
+    <div id="earning" class="card">
+        <h2>💰 Latest Earning Methods</h2>
+        <p>Verified Airdrops aur Web3 projects ki list yahan dekhein. Bina investment ke shuru karein.</p>
+        <a href="https://t.me/mooarmybot?start=c_pe3O_GPigqranWlfQWgMuw" class="btn">View Live Airdrops</a>
+    </div>
 
-    <section id="coding" class="card">
-        <h2>Python & Automation</h2>
-        <p>Seekho kaise Telegram bots banayein aur apna kaam automate karein.</p>
-        <code>print("Hello Jaivik & Tiya!")</code>
-    </section>
+    <div id="coding" class="card">
+        <h2>🐍 Python Corner</h2>
+        <p>Telegram bots aur automation seekhne ke liye perfect jagah.</p>
+        <code>print("Jaivik & Tiya, Future Tech Stars!")</code>
+    </div>
 </div>
 
 <footer>
-    <p>&copy; 2026 Jaivik Tiya Tech | Made with ❤️ for Family</p>
+    <p>&copy; 2026 Jaivik Tiya Tech | Built with Coding Power</p>
 </footer>
 
 </body>
 </html>
+
