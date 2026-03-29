@@ -50,7 +50,8 @@
         .floating-btn { position: fixed; right: 20px; z-index: 1000; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; color: white; text-decoration: none; }
         .whatsapp { bottom: 95px; background-color: #25d366; }
         .telegram { bottom: 25px; background-color: #0088cc; }
-        footer { text-align: center; padding: 40px; font-size: 0.8rem; opacity: 0.5; border-top: 1px solid #222; }
+        footer { text-align: center; padding: 40px; font-size: 0.8rem; opacity: 0.8; border-top: 1px solid #222; }
+        .visitor-badge { margin-top: 15px; display: inline-block; }
     </style>
 </head>
 <body>
@@ -124,11 +125,11 @@
     <h2 id="calculator" class="section-title"><i class="fas fa-calculator"></i> Profit Calculator</h2>
     <div class="card calc-box">
         <div class="input-group">
-            <label>Total Tokens Earned (Kitne coin kamaye?)</label>
+            <label>Total Tokens Earned</label>
             <input type="number" id="tokens" placeholder="e.g. 5000">
         </div>
         <div class="input-group">
-            <label>Expected Price per Token in $ (Listing Price)</label>
+            <label>Expected Price in $</label>
             <input type="number" id="price" placeholder="e.g. 0.05" step="0.001">
         </div>
         <button class="btn" onclick="calculateProfit()">Calculate My Profit 🚀</button>
@@ -138,56 +139,37 @@
 
 <footer>
     <p>© 2026 Jaivik Tiya Tech | Built by Yogesh Jhirwal, Jaipur</p>
+    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fusahauntedtales-jpg.github.io%2Fjaiviktiyatech&count_bg=%2300d2ff&title_bg=%23111111&icon=&icon_color=%23E7E7E7&title=Total+Views&edge_flat=true" alt="Visitor Count" class="visitor-badge">
 </footer>
 
 <script>
-    // 1. Fetch Live Crypto Prices API (CoinGecko)
     async function fetchCryptoPrices() {
         try {
             let response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana&vs_currencies=usd,inr');
             let data = await response.json();
-            
-            // Update BTC
             document.getElementById('btc-usd').innerText = "$" + data.bitcoin.usd.toLocaleString();
             document.getElementById('btc-inr').innerText = "₹" + data.bitcoin.inr.toLocaleString();
-            
-            // Update ETH
             document.getElementById('eth-usd').innerText = "$" + data.ethereum.usd.toLocaleString();
             document.getElementById('eth-inr').innerText = "₹" + data.ethereum.inr.toLocaleString();
-            
-            // Update SOL
             document.getElementById('sol-usd').innerText = "$" + data.solana.usd.toLocaleString();
             document.getElementById('sol-inr').innerText = "₹" + data.solana.inr.toLocaleString();
         } catch (error) {
             console.error("Price fetch error:", error);
-            document.getElementById('btc-usd').innerText = "API Error";
-            document.getElementById('eth-usd').innerText = "API Error";
-            document.getElementById('sol-usd').innerText = "API Error";
         }
     }
-    
-    // Call the function as soon as page loads
     fetchCryptoPrices();
 
-    // 2. Calculator Logic
     function calculateProfit() {
         let tokens = document.getElementById('tokens').value;
         let price = document.getElementById('price').value;
         let resultDiv = document.getElementById('calcResult');
-
-        if(tokens === "" || price === "") {
-            alert("Bhai, pehle tokens aur price toh daal do!");
-            return;
-        }
-
+        if(tokens === "" || price === "") { alert("Bhai, pehle tokens aur price toh daal do!"); return; }
         let profitUSD = tokens * price;
-        let profitINR = profitUSD * 88; // Approx USD to INR
-
+        let profitINR = profitUSD * 88; 
         resultDiv.style.display = "block";
         resultDiv.innerHTML = `Estimated Profit: <br> 💵 $${profitUSD.toFixed(2)} USD <br> 🇮🇳 ₹${profitINR.toFixed(0)} INR`;
     }
 </script>
 
 </body>
-                            </html>
-                            
+</html>
